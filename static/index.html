@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pickle calculator</title>
+    <meta name="theme-color" content="white">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" type="image/png" />
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel=stylesheet type=text/css href=stylesheet/index.css />
+
+    <script type="module" src="scripts/index.js"></script>
+</head>
+<body>
+
+    <header>
+        <span class="logo" aria-hidden="true">🥒</span>
+        <h1>Pickle calculator</h1>
+    </header>
+
+    <main>
+        <form>
+            <fieldset id=vinegar-setup>
+                <legend>Vinegar type</legend>
+
+                <p class="form-element form-element--radio">
+                    <label  for=vinegar-type-wine>
+                        <input type=radio name=vinegarType id=vinegar-type-wine value=wine checked />
+                        Wine
+                    </label>
+                </p>
+                <p class="form-element form-element--radio">
+                    <label for=vinegar-type-spirit>
+                        <input type=radio name=vinegarType id=vinegar-type-spirit value=spirit />
+                        Spirit
+                    </label>
+                </p>
+
+                <p class="form-element">
+                    <label for=vinegar-percentage>
+                        <span class="form-element__label">Percentage</span>
+                        <span class="form-element__value">
+                            <input
+                                class="form-element__input"
+                                type=number
+                                name=vinegarPercentage
+                                id=vinegar-percentage
+                                min=1
+                                step=1
+                                value=6
+                                aria-label="Vinegar percentage"
+                            />
+                            <span class="form-element__unit">%</span>
+                        </span>
+                    </label>
+                </p>
+            </fieldset>
+
+            <fieldset id=proportions>
+                <legend>Proportions</legend>
+
+                <p class="form-element">
+                    <label for=water>
+                        <span class="form-element__label">Water</span>
+                        <span class="form-element__value">
+                            <input
+                                class="form-element__input"
+                                type=number
+                                name=water
+                                id=water
+                                min=1
+                                step=1
+                                value=450
+                            />
+                            <abbr class="form-element__unit" title="grams">g</abbr>
+                        </span>
+                    </label>
+                </p>
+                <p class="form-element">
+                    <label for=vinegar>
+                        <span class="form-element__label">Vinegar</span>
+                        <span class="form-element__value">
+                            <input
+                                class="form-element__input"
+                                type=number
+                                name=vinegar
+                                id=vinegar
+                                min=1
+                                step=1
+                                value=350
+                            />
+                            <abbr class="form-element__unit" title="grams">g</abbr>
+                        </span>
+                    </label>
+                </p>
+                <p class="form-element">
+                    <label for=sugar>
+                        <span class="form-element__label">Sugar</span>
+                        <span class="form-element__value">
+                            <input
+                                class="form-element__input"
+                                type=number
+                                name=sugar
+                                id=sugar
+                                min=1
+                                step=1
+                                value=70
+                            />
+                            <abbr class="form-element__unit" title="grams">g</abbr>
+                        </span>
+                    </label>
+                </p>
+                <p class="form-element">
+                    <label for=salt>
+                        <span class="form-element__label">Salt</span>
+                        <span class="form-element__value">
+                            <input
+                                class="form-element__input"
+                                type=number
+                                name=salt
+                                id=salt
+                                min=1
+                                step=1
+                                value=20
+                            />
+                            <abbr class="form-element__unit" title="grams">g</abbr>
+                        </span>
+                    </label>
+                </p>
+                <p class="form-element">
+                    <label for=total>
+                        <strong class="form-element__label">Total</strong>
+                        <span class="form-element__value">
+                            <input
+                                class="form-element__input"
+                                type=number
+                                name=total
+                                id=total
+                                min=1
+                                step=1
+                                value=890
+                            />
+                            <abbr class="form-element__unit" title="grams">g</abbr>
+                        </span>
+                    </label>
+                </p>
+            </fieldset>
+        </form>
+    </main>
+
+</body>
+</html>

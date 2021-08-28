@@ -1,5 +1,7 @@
-@saji/pickle-calculator
-=======================
+Pickle Calculator
+=================
+
+Calculate amounts of water, vinegar and salt to use for pickling.
 
 
 Code of conduct

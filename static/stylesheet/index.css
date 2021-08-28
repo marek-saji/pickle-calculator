@@ -1,0 +1,160 @@
+/* Switch to RTL when Google translates the page to an RTL language */
+.translated-rtl
+{
+    direction: rtl;
+}
+
+:root
+{
+    --bg-colour: #fff;
+    --fg-colour: #111;
+    --secondary-fg-colour: #555;
+    --tetriary-fg-colour: #aaa; /* do not use for text */
+    --accent-colour: #4caf50;
+    --border-colour: var(--secondary-fg-colour);
+    --secondary-border-colour: var(--tetriary-fg-colour);
+}
+
+@media (prefers-color-scheme: dark)
+{
+    :root
+    {
+        --bg-colour: #111;
+        --fg-colour: #fff;
+        --secondary-fg-colour: #aaa;
+        --tetriary-fg-colour: #555;
+    }
+}
+
+html,
+body
+{
+    min-height: 100vh;
+}
+
+html
+{
+    color: var(--fg-colour);
+    font-size: 1.2em;
+    font-family: sans-serif;
+    background-color: var(--bg-colour);
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 20em;
+    margin: 0 auto;
+    padding: 0.5ex;
+}
+
+input,
+textarea
+{
+    padding: 0.5ex;
+    color: inherit;
+    font-size: 1em;
+    background-color: inherit;
+    border: var(--border-colour) solid thin;
+    border-radius: 0.25ex;
+    accent-color: var(--accent-colour);
+}
+
+input:focus-visible,
+textarea:focus-visible
+{
+    outline: var(--accent-colour) auto 1px;
+}
+
+fieldset
+{
+    border: var(--secondary-border-colour) solid thin;
+    border-radius: 0.25ex;
+}
+
+fieldset + fieldset
+{
+    margin-block-start: 1em;
+}
+
+legend
+{
+    color: var(--secondary-fg-colour);
+    margin-inline: -2px;
+    padding-inline: 2px;
+}
+
+.logo
+{
+    display: block;
+    font-size: 1.5em;
+    line-height: 1em;
+    text-align: center;
+    margin-block-start: 1rem;
+    text-shadow:
+        0 0 0.1em var(--bg-colour),
+        0 0 0.3em var(--accent-colour);
+}
+
+h1
+{
+    font-size: 1em;
+    font-size: 15vw;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--accent-colour);
+    text-underline-offset: 0.25ex;
+}
+
+@media (min-width: 13em)
+{
+    .logo { font-size: 3em; }
+    h1 { font-size: 2.25em; }
+}
+
+.form-element
+{
+    margin-block: 1em;
+}
+
+fieldset > legend + .form-element,
+fieldset > .form-element:first-child
+{
+    margin-block-start: 0.25em;
+}
+
+.form-element__label
+{
+    display: block;
+    width: 100%;
+}
+
+.form-element__value
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.form-element__input
+{
+    flex: 1;
+    width: 4ch;
+    text-align: center;
+}
+
+.form-element__unit
+{
+    min-width: 1.5ch;
+    color: var(--secondary-fg-colour);
+    text-align: start;
+    padding-inline-start: 1ch;
+}
+
+.form-element--radio
+{
+    margin-block: 0.5em;
+}

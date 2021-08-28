@@ -1,5 +1,7 @@
 {
   "name": "@saji/pickle-calculator",
+  "description": "Calculate amounts of water, vinegar and salt to use for pickling.",
+  "keywords": ["pickle", "vinegar", "calculator"],
   "version": "1.0.0-pre",
   "author": {
     "name": "Marek ‘saji’ Augustynowicz",
