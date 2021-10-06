@@ -17,7 +17,7 @@
     "node": "~12.22.0 ~14.17.0 ~16.1.0"
   },
   "scripts": {
-    "dev": "browser-sync --port 5000 static --watch",
+    "dev": "browser-sync --port 5000 --no-ui --watch=false static",
     "test": "echo 'No tests (yet)'",
     "lint": "npm-run-all --parallel --print-name --aggregate-output 'lint:*'",
     "lint:js": "eslint --max-warnings=0 --ext=.js,.mjs,.cjs,.jsx,.ts,.tsx \"${@:-.}\"",
