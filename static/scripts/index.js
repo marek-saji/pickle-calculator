@@ -142,3 +142,11 @@ proportionsElement.addEventListener('input', (event) => {
 });
 
 handleProportionChange('total');
+
+// Make things look interactive
+Array.from(document.querySelectorAll('[hidden]')).forEach((e) => {
+    e.removeAttribute('hidden');
+});
+Array.from(document.querySelectorAll('[readonly]')).forEach((e) => {
+    e.removeAttribute('readonly');
+});

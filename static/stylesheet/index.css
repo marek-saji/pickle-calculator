@@ -62,11 +62,32 @@ textarea
     accent-color: var(--accent-colour);
 }
 
+input:focus,
+textarea:focus
+{
+    outline: var(--accent-colour) auto 1px;
+}
+
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible)
+{
+    outline: none;
+}
+
+/* stylelint-disable no-descending-specificity */
+
 input:focus-visible,
 textarea:focus-visible
 {
     outline: var(--accent-colour) auto 1px;
 }
+
+input:read-only
+{
+    --border-colour: transparent;
+}
+
+/* stylelint-enable no-descending-specificity */
 
 fieldset
 {
